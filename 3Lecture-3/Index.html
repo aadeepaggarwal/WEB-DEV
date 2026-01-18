@@ -17,10 +17,23 @@
         h1{
             background-color: black;
         }
+        .mydiv{
+            color: aquamarine !important; /*!important se iskoprefernce*/
+        }
+        /*<!--Issey class mydiv ke sab pe apply but neeche id wale se id ko preference milegi -->*/
+        #myid1{
+            color: blue;
+        }
+        #myid1{
+            color: rgb(0, 255, 94); /*isko prefernce than upar wala as top to bottom code executed specificity clash*/
+        }
     </style>
 </head>
 <body>
     <h1 style="color: orange;">Hello World</h1>
     <div>I am a div</div>
+    <div id="myid1" class="mydiv"> This is div 2</div><!-- .mydiv likh ke div ban gayi -->
+
+    <div id="myid2" class="mydiv">This is div 3 </div>
 </body>
 </html>
