@@ -5,16 +5,25 @@
 }
  body{
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    flex-direction: column;
+    margin-top: 20px;
  }
 .container{
+    margin-top: 100px;
     display: flex;
     width: 1000px;
     height: 400px;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 10px;
     gap: 10px;
     background-color: rgb(194, 193, 193);
+    color: black;
 }
 
 .item{
