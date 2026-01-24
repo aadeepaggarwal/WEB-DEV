@@ -1,0 +1,14 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    display: flex;
+    background-color: black;
+    height: 50px;
+    flex-wrap: wrap;
+    color: white;
+}
+.nav{
+    display: flex;
+}

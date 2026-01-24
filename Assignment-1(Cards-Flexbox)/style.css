@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding: 0;
+    
+}
+ body{
+    background-color: black;
+ }
+.container{
+    display: flex;
+    width: 1000px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    gap: 10px;
+    background-color: rgb(194, 193, 193);
+}
+
+.item{
+    
+    display: flex;
+    width: 200px;
+    height: 300px;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.Image{
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
