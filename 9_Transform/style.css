@@ -1,0 +1,20 @@
+#container{
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+    transition-duration: 2s; /*apply the transition after 2 seconds*/
+    /* transition-delay: 1s; apply transition after 1s of starting */
+    /* transition-timing-function: ease-in; ek state se dusri pe jane mein kya pattern follow hoga */
+    /* example ease in cuases it to go slow to fast */
+    transition-timing-function: cubic-bezier(0.75, 0.42, 0.05, 1); /*customized transition*/
+    
+}
+
+#container:active{
+    background-color: rgb(218, 147, 41);
+    /* transform: translateX(100px);*/
+    transform: translateY(100px); 
+    /* transform: scale(1.5); */
+    /* border-radius: 50%; mzkes it a circle on hovering, either give percentage or px */
+
+}

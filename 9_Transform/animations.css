@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    height: 100vh;/*ye dene pe box center pe jayega warna body ki height 0 reh jayegi*/
+    justify-content: center;
+    align-items: center;
+    
+}
+.box{
+    width: 1000px;
+    height: 250px;
+    border: 4px solid black;
+
+}
+
+.box:hover .item{ /*means box pe hover karne pe item pe change ho, ye item pe nahi lagaya kyonki item starting mein maybe ho hi na*/
+    width: 100%;
+}
+.item{
+    background-color: blueviolet;
+    height: 100%;
+    width: 50%;
+    /* animation-name: loader2;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; */
+    animation: loader2 10s forwards infinite; /*condensed form*/
+}
+/*Creating an animation using keyframe, apply loader name ki animation upar item pe*/
+@keyframes loader {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+/*from to ki jagah timestamps ya percentage bhi de sakte hain*/
+
+@keyframes loader2 {
+    0%{
+        width: 0%;
+    }
+    40%{
+        width: 30%;
+    }
+    70%{
+        width: 60%;
+    }
+    100%{
+        width: 100%;
+    }
+}

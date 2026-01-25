@@ -1,14 +1,37 @@
-*{
-    padding: 0px;
-    margin: 0px;
+.simple-nav {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between; /* Spreads groups to edges */
+  background: #000;
+  color: #fff;
+  padding: 15px 30px;
+  font-family: sans-serif;
 }
-.container{
-    display: flex;
-    background-color: black;
-    height: 50px;
-    flex-wrap: wrap;
-    color: white;
+
+.brand-group {
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
-.nav{
-    display: flex;
+
+.links-group {
+  display: flex;
+  gap: 20px; /* Controls spacing between links */
+}
+
+.item {
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.item:hover {
+  color: #aaa;
+}
+
+.dot-icon {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%; /* Makes it a circle */
 }
