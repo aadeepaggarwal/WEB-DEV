@@ -17,3 +17,14 @@ arr2[8]=20; // can have empty items
 
 console.log(arr2);
 
+for(let i=0;i<arr.length;i++){ // let or var any
+    const element=arr[i];
+    console.log(element);
+}
+// for of loop
+for(let data of arr){
+    console.log(data);
+}
+
+
+
