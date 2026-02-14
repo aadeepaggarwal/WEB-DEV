@@ -27,3 +27,17 @@ function sum2(a=0,b=0){
 }
 console.log(sum2(10,29));
 console.log(sum2(10));// a 10 ho jayega b 0 automatically
+
+// Arrow functions: Lambda functions
+let sayhi=()=>{
+    console.log("Say Hi");
+}
+sayhi();
+let add=(a,b)=>{
+    return a+b;
+}
+console.log(add(10,20));
+
+// Arrow function mein single lines means that by default it will be returnd 
+let add2=(a,b)=> a+b; // short hand to create functions and by default a+b return ho jayega
+console.log(add2(10,20));
