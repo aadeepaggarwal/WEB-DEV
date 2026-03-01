@@ -22,7 +22,7 @@ function CreateAccount(name, college){
         console.log("Balance", balance);
     }
 
-    return { // returnng an abject jisme key ye hai and value function descri[tion automatically]
+    return { // returnng an object jisme key ye hai and value function description automatically]
         credit, // or "Credit":credit,
         deposit,
         checkbalance,
