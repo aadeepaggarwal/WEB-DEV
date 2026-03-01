@@ -30,3 +30,12 @@ document.querySelector('body')
         console.log(ev.key)
         console.log(ev) // gives full event details
     })
+
+document.querySelector('#inp')
+    .addEventListener('focus',()=>{
+        console.log("Focus")
+    })
+document.querySelector('#inp')
+    .addEventListener('blur',()=>{
+        console.log("Blur")
+    })
