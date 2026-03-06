@@ -1,4 +1,4 @@
-let url= 'https://jsonplaceholder.typicode.com/todos/' // if site link agalat then error ajayega
+// let url= 'https://jsonplaceholder.typicode.com/todos/' // if site link agalat then error ajayega
 
 /*
 Upar wale url ka data lena hai
@@ -27,7 +27,57 @@ fetch(url)
     })
 */
 
+// let todosList = document.querySelector('.todosList');
+
+
+// fetch(url)
+//     .then((x) => {
+//         return x.json();
+//     })
+//     .then(function (data) {
+//         // Show this data on the browser
+//         // console.log(data)
+//         for (let i = 0; i < data.length; i++) {
+//             // console.log(data[i]);
+//             const { id, userId, title, completed } = data[i];
+//             console.log(id, userId, completed, title);
+//             // 1. Create element
+//             let li = document.createElement('li');
+//             li.innerText = `Title: ${title}, 
+//             userId: ${userId},
+//             completed: ${completed},
+//             title: ${title}`
+
+//             todosList.appendChild(li);
+//         }
+//     })
+//     .catch(err => {
+//         return err
+//     })
+
+
+// same using fucntion
+
 let todosList = document.querySelector('.todosList');
+let url = 'https://jsonplaceholder.typicode.com/todos/';
+function updateTodos(data) {
+    // Always empty the content of todosList
+    todosList.innerText = '';
+    
+    for (let i = 0; i < data.length; i++) {
+        // console.log(data[i]);
+        const { id, userId, title, completed } = data[i];
+        console.log(id, userId, completed, title);
+        // 1. Create element
+        let li = document.createElement('li');
+        li.innerText = `Title: ${title}, 
+            userId: ${userId},
+            completed: ${completed},
+            title: ${title}`
+
+        todosList.appendChild(li);
+    }
+}
 
 
 fetch(url)
@@ -37,19 +87,7 @@ fetch(url)
     .then(function (data) {
         // Show this data on the browser
         // console.log(data)
-        for (let i = 0; i < data.length; i++) {
-            // console.log(data[i]);
-            const { id, userId, title, completed } = data[i];
-            console.log(id, userId, completed, title);
-            // 1. Create element
-            let li = document.createElement('li');
-            li.innerText = `Title: ${title}, 
-            userId: ${userId},
-            completed: ${completed},
-            title: ${title}`
-
-            todosList.appendChild(li);
-        }
+        updateTodos(data);
     })
     .catch(err => {
         return err
