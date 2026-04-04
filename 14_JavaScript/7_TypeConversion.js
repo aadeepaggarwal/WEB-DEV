@@ -17,7 +17,7 @@ console.log("arr==arr2", arr==arr2);
 //True case: ARRAY MEIN ADDRESS COMPARE HOTA HAI
 console.log("arr3==arr", arr3==arr);
 
-console.log("0==[]", 0==[]);// gives tryue kyonki bada wala converts into smaller data type
+console.log("0==[]", 0==[]);// gives true kyonki bada wala converts into smaller data type
 console.log("+[]", +[]);// convert array into number data type
 
 console.log("0=={}", 0=={});// gives false kyonki object hai
