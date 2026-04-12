@@ -28,12 +28,21 @@ app.post('/todos', async (req, res) => {
 })
 
 // To delete a todo
+// app.delete('/todos', async (req, res) => {
+//     const { id } = req.body;
+
+//     await Todos.deleteTodo(id);
+//     res.redirect('/todos');
+// })
+
 app.delete('/todos', async (req, res) => {
     const { id } = req.body;
 
     await Todos.deleteTodo(id);
-    res.redirect('/todos');
-})
+
+    let allTodos = await Todos.getTodos(); // get updated list
+    res.json(allTodos); // ✅ send JSON
+});
 
 // To update a todo
 app.patch('/todos', async (req, res) => {

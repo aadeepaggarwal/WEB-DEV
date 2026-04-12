@@ -37,15 +37,23 @@ async function decreasePriority(id) {
     refreshTodos(allTodos)
 }
 
+// async function deleteTodo(id) {
+//     let response = await axios.delete(`/todos`, {
+//         data: {
+//             id
+//         }
+//     });
+//     console.log(response)
+//     // let allTodos = response.data;
+//     // refreshTodos(allTodos)
+// }
 async function deleteTodo(id) {
     let response = await axios.delete(`/todos`, {
-        data: {
-            id
-        }
+        data: { id }
     });
-    console.log(response)
-    // let allTodos = response.data;
-    // refreshTodos(allTodos)
+
+    let allTodos = response.data;   // ✅ now works
+    refreshTodos(allTodos);
 }
 
 function refreshTodos(todos) {
