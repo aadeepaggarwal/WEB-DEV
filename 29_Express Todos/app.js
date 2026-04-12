@@ -1,10 +1,13 @@
 const path = require('path');
 const express = require('express');
-const Todos = require('./lib/Todos')
+const Todos = require('./lib/Todos');
 const app = express();
 const PORT = 4444;
 
+// To use POST via POSTMAN/Browser(FORM TAG)
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); // To use axios
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // To return all the todos
@@ -47,14 +50,14 @@ app.patch('/todos', async (req, res) => {
 
 // To increase priority of a todo
 app.get('/increase-priority', async (req, res) => {
-    const { id } = req.body;
+    const { id } = req.query;
     await Todos.increasePriority(id);
     res.redirect('/todos');
 })
 
 // To decrease priority of a todo
 app.get('/decrease-priority', async (req, res) => {
-    const { id } = req.body;
+    const { id } = req.query;
     await Todos.decreasePriority(id);
     res.redirect('/todos');
 })
