@@ -20,7 +20,7 @@ const app= express();
 // })
 
 // instead of sending all fles use public folder 
-app.use('/', express.static(path.join(__dirname,'public'))); // can change [ublic folder name to something else]
+app.use('/', express.static(path.join(__dirname,'public'))); // can change [public folder name to something else]
 app.listen(4444, function(){
     console.log("http://localhost:4444/");
 }) // now automatically it runs index.html and usme se css js khud run ho jayegi jo internally linked hogi uske

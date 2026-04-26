@@ -1,5 +1,6 @@
 # Node modules (global or local)
 node_modules/
+data/
 
 # Specific ignore
 package-lock.json
